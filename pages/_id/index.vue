@@ -1,13 +1,10 @@
 <template>
   <div>
-    <Banner 
-      title="Adventure Park - Lite"
-      subtitle="Stay hungry. Stay foolish"
-      />
     <articles-list :articlesList="articlesList"/>
 
     <div class="next">
-      <nuxt-link to="/1">Next ></nuxt-link>
+      <nuxt-link :to="'/' + prePageId">&lt; Pre&nbsp;&nbsp;</nuxt-link>
+      <nuxt-link :to="'/' + nextPageId">&nbsp;&nbsp;Next ></nuxt-link>
     </div>
   </div>
 </template>
@@ -21,8 +18,20 @@ export default {
     Banner,
     ArticlesList
   },
+  computed: {
+    prePageId() {
+      if (this.$route.params.id === '1') {
+        return ''
+      } else {
+        return Number(this.$route.params.id) - 1
+      }
+    },
+    nextPageId() {
+      return Number(this.$route.params.id) + 1
+    }
+  },
   asyncData({ app, params }) {
-      return app.$axios.get(`https://api.peterchen.club/api/articles/page/1`).then(res => {
+      return app.$axios.get(`https://api.peterchen.club/api/articles/page/${Number(params.id) + 1}`).then(res => {
         return {
           articlesList: res.data.rows
         }

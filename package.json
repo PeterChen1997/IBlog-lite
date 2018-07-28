@@ -4,6 +4,7 @@
   "description": "Nuxt.js project",
   "author": "Peter Chen",
   "private": true,
+  "homepage": "https://blogLite.peterchen.club",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -13,7 +14,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "@nuxtjs/axios": "^5.3.1",
+    "nuxt": "^1.0.0",
+    "nuxt-bulma-slim": "^0.4.0",
+    "primer-markdown": "^3.7.9",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -23,4 +28,3 @@
     "eslint-plugin-vue": "^4.0.0"
   }
 }
-
