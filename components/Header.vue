@@ -18,6 +18,9 @@
         <div :class='{"navbar-menu": true, "is-active": menuOpenStatus}'
             @click="handleClick">
             <div class="navbar-end">
+                <a href="https://blog.peterchen.club" class="navbar-item">
+                    回到原版
+                </a>
                 <nuxt-link class="navbar-item" to="/about">
                     关于
                 </nuxt-link>
