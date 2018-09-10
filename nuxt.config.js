@@ -27,7 +27,7 @@ module.exports = {
       }
     ],
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    ['@nuxtjs/pwa', {workbox: {publicPath: '/_nuxt/'}, manifest: {publicPath: "/_nuxt/"}}]
   ],
   axios: {
     baseURL: ''
