@@ -27,7 +27,7 @@ module.exports = {
       }
     ],
     '@nuxtjs/axios',
-    ['@nuxtjs/pwa', {workbox: {publicPath: '/_nuxt/'}, manifest: {publicPath: "/_nuxt/"}}]
+    '@nuxtjs/pwa'
   ],
   axios: {
     baseURL: ''
@@ -41,6 +41,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    // publicPath: 'https://bloglite.peterchen.club/',
     postcss: {
       plugins: {
         'postcss-custom-properties': {
