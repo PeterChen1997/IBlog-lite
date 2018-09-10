@@ -26,10 +26,16 @@ module.exports = {
         additionalPaths: ['assets/scss/component-styles.scss']
       }
     ],
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
   axios: {
     baseURL: ''
+  },
+  workbox: {
+    importScripts: [
+        'custom-sw.js'
+    ]
   },
   /*
   ** Build configuration

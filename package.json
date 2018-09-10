@@ -6,7 +6,7 @@
   "private": true,
   "homepage": "https://blogLite.peterchen.club",
   "scripts": {
-    "dev": "PORT=3002 nuxt",
+    "dev": "HOST=0.0.0.0 PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "PORT=3002 nuxt start",
     "generate": "nuxt generate",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/pwa": "^2.5.0",
     "nuxt": "^1.0.0",
     "nuxt-bulma-slim": "^0.4.0",
     "primer-markdown": "^3.7.9",
