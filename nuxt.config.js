@@ -10,14 +10,16 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/font-awesome-4.7.0/css/font-awesome.min.css' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3eaf7c' },
+  css: [
+    '@/assets/font-awesome-4.7.0/css/font-awesome.min.css'
+  ],
   modules: [
     [
       'nuxt-bulma-slim',
